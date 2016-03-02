@@ -1,0 +1,2 @@
+defmodule ElixirBook do
+end
