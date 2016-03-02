@@ -1,11 +1,11 @@
 defmodule Sum do
-  def sum([]), do: 0
-  def sum([head | []]), do: head
-  def sum([a | [b | tail]]) do
-    sum([a+b | tail])
+  def my_sum([]), do: 0
+  def my_sum([head | []]), do: head
+  def my_sum([a | [b | tail]]) do
+    my_sum([a+b | tail])
   end
 end
 
-IO.puts Sum.sum([])
-IO.puts Sum.sum([1])
-IO.puts Sum.sum([1, 2, 3, 4])
+IO.puts Sum.my_sum([])
+IO.puts Sum.my_sum([1])
+IO.puts Sum.my_sum([1, 2, 3, 4])
