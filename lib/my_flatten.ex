@@ -15,4 +15,3 @@ defmodule MyFlatten do
     end
   end
 end
-

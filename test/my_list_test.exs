@@ -6,11 +6,11 @@ defmodule MyListTest do
   def list, do: Enum.to_list(1..5)
 
   test "all? checks a predicate" do
-    assert MyList.all?(list, &(&1 < 4)) == false
+    refute MyList.all?(list, &(&1 < 4))
   end
 
   test "all? makes sense of empty lists" do
-    assert MyList.all?([], &(&1 < 4)) == true
+    assert MyList.all?([], &(&1 < 4))
   end
 
   test "each calls a function once for each element in the list" do

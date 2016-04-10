@@ -18,16 +18,16 @@ defmodule MyList do
   end
 
   def split(list, n), do: do_split([], list, n)
-  def do_split(first, second = [], _), do: do_split_result(first, second)
-  def do_split(first, second, 0), do: do_split_result(first, second)
-  def do_split(first, [head | tail], n) do
+  defp do_split(first, second = [], _), do: do_split_result(first, second)
+  defp do_split(first, second, 0), do: do_split_result(first, second)
+  defp do_split(first, [head | tail], n) do
     do_split([head | first], tail, n - 1)
   end
-  def do_split_result(first, second), do: [Enum.reverse(first), second]
+  defp do_split_result(first, second), do: [Enum.reverse(first), second]
 
   def take(list, n), do: do_take(list, n, [])
-  def do_take(_, 0, agg), do: do_take_result(agg)
-  def do_take([], _, agg), do: do_take_result(agg)
-  def do_take([head|tail], n, agg), do: do_take(tail, n-1, [head|agg])
-  def do_take_result(agg), do: Enum.reverse(agg)
+  defp do_take(_, 0, agg), do: do_take_result(agg)
+  defp do_take([], _, agg), do: do_take_result(agg)
+  defp do_take([head|tail], n, agg), do: do_take(tail, n-1, [head|agg])
+  defp do_take_result(agg), do: Enum.reverse(agg)
 end

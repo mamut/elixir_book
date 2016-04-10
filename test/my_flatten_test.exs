@@ -14,6 +14,7 @@ defmodule MyFlattenTest do
   end
 
   test "flattening list with nested sublists" do
-    assert MyFlatten.flatten([ 1, [ 2, 3, [4] ], 5, [[[6]]]]) == [1, 2, 3, 4, 5, 6]
+    assert MyFlatten.flatten([ 1, [ 2, 3, [4] ], 5, [[[6]]]]) == \
+      [1, 2, 3, 4, 5, 6]
   end
 end
