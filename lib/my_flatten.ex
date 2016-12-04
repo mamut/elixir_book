@@ -1,4 +1,6 @@
 defmodule MyFlatten do
+  @moduledoc "Flattens the received list."
+
   def flatten([]), do: []
 
   def flatten(list) do

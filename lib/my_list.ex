@@ -1,4 +1,6 @@
 defmodule MyList do
+  @moduledoc "Reimplements functions that operate on lists."
+
   def all?([], _), do: true
   def all?([head | tail], func), do: func.(head) && all?(tail, func)
 
