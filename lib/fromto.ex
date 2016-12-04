@@ -1,4 +1,6 @@
 defmodule Fromto do
+  @moduledoc "Generate a list with elements in given range."
+
   def span(from, to) do
     do_span(from, to, [])
   end
@@ -11,5 +13,3 @@ defmodule Fromto do
     do_span(n + 1, max, [n | acc])
   end
 end
-
-IO.inspect Fromto.span(3, 11)
