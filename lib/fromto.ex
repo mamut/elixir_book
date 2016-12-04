@@ -11,7 +11,7 @@ defmodule Fromto do
     Enum.reverse acc
   end
 
-  def do_span(n, max, acc) do
-    do_span(n + 1, max, [n + 1 | acc])
+  def do_span(n, to, acc) do
+    do_span(n + 1, to, [n + 1 | acc])
   end
 end
