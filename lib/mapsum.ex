@@ -1,4 +1,6 @@
 defmodule Mapsum do
+  @moduledoc "Another round of reimplementing list functions."
+
   def mapsum([], _), do: 0
   def mapsum([head | tail], func) do
     func.(head) + mapsum(tail, func)
@@ -16,11 +18,3 @@ defmodule Mapsum do
     [head + n | caesar(tail, n)]
   end
 end
-
-IO.puts Mapsum.mapsum [1, 2, 3], &(&1 * &1)
-
-IO.puts Mapsum.my_max [1, 2, 3]
-IO.puts Mapsum.my_max [1, 3, 2]
-IO.puts Mapsum.my_max [3, 2, 1]
-
-IO.puts Mapsum.caesar('ryvkve', 13)
