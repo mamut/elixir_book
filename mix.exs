@@ -28,8 +28,8 @@ defmodule ElixirBook.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:credo, "~> 0.3", only: [:dev, :test]},
-      {:dogma, "~> 0.0", only: :dev},
+      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:dogma, "~> 0.1", only: :dev},
     ]
   end
 end
