@@ -9,7 +9,7 @@ defmodule MyFlatten do
 
   defp do_flatten([], agg), do: agg
 
-  defp do_flatten([head|tail], agg) do
+  defp do_flatten([head | tail], agg) do
     if is_list(head) do
       do_flatten(tail, do_flatten(head, agg))
     else

@@ -30,6 +30,6 @@ defmodule MyList do
   def take(list, n), do: do_take(list, n, [])
   defp do_take(_, 0, agg), do: do_take_result(agg)
   defp do_take([], _, agg), do: do_take_result(agg)
-  defp do_take([head|tail], n, agg), do: do_take(tail, n - 1, [head|agg])
+  defp do_take([head | tail], n, agg), do: do_take(tail, n - 1, [head | agg])
   defp do_take_result(agg), do: Enum.reverse(agg)
 end
