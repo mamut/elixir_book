@@ -2,7 +2,7 @@ defmodule Comprehension do
   @moduledoc "Calculates primes and taxes."
 
   def primes(n) do
-    list = for x <- 2..n, do: [x, Fromto.span(2, div(x,2))]
+    list = for x <- 2..n, do: [x, Fromto.span(2, div(x, 2))]
     list
       |> Enum.filter(&prime?/1)
       |> Enum.map(&List.first/1)
